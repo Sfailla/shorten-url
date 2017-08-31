@@ -2,6 +2,7 @@
   "name": "shorturl-app",
   "version": "1.0.0",
   "description": "a web app that shortens urls",
+  "private": true,
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

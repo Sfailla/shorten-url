@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname + '/public')));
 app.use(express.static(path.join(__dirname + '/css')));
 app.use(express.static(path.join(__dirname + '/js')));
 
-mongoose.connect(mlab || config.getDbConnectionString(), {
+mongoose.connect(config.mlab || config.getDbConnectionString(), {
   useMongoClient: true
 });
 mongoose.Promise = global.Promise;

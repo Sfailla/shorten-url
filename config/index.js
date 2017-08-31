@@ -1,4 +1,4 @@
-var configValues = require('./config.json');
+var configValues = require('./config');
 
 module.exports = {
     getDbConnectionString: function() {
