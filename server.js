@@ -11,7 +11,6 @@ var setupController = require('./controllers/setupController');
 var app = express();
 
 var port = process.env.PORT || 3000;
-var mlab = process.env.MONGODB_URI;
 var lb = '127.0.0.1';
 
 app.use(cors());
@@ -23,7 +22,7 @@ app.use(express.static(path.join(__dirname + '/public')));
 app.use(express.static(path.join(__dirname + '/css')));
 app.use(express.static(path.join(__dirname + '/js')));
 
-mongoose.connect(config.mlab || config.getDbConnectionString(), {
+mongoose.connect(config.getDbConnectionString(), {
   useMongoClient: true
 });
 mongoose.Promise = global.Promise;
