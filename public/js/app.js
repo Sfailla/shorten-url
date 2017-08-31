@@ -19,7 +19,10 @@ window.onload = function() {
                 output.innerHTML = response.data.short_url;
                 shortButton.textContent = 'Add Link';
                 console.log(response.data);
-                }
+                }          
+            })
+            .catch(function(err) {
+                if (err) throw err;
             });
         
 
