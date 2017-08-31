@@ -11,7 +11,6 @@ var setupController = require('./controllers/setupController');
 var app = express();
 
 var port = process.env.PORT || 3000;
-var lb = '127.0.0.1';
 
 app.use(cors());
 
@@ -29,7 +28,7 @@ mongoose.Promise = global.Promise;
 
 setupController(app);
 
-app.listen(port, lb, function(err) {
+app.listen(port, function(err) {
     if (err) console.log(err);
     console.log('The server is running on port: ' + port);
 });
