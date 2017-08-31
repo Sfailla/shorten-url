@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Open+Sans|Oswald|Raleway|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>URl Shortner</title>
+</head>
+    <body>
+        <div class="container">
+                <h1>Url Shortener</h1>
+                <h3>A back-end microservice project from FreeCodeCamp</h3>
+        
+                <h2>documentation: </h2>
+                <h3>This service will take a web address and return a shortened unique id for that particular website</h3>
+                <ul>    
+                    <li>Add a website address by entering a valid web address using <span>http://</span> or <span>https://</span> and click on Add Link</li>
+                    <li>When you click the Add Link button, you will recieve a message stating that your custom web address was successfully saved to the database.</li>
+                    <li>Press the Get Id button to recieve a unique shortened id</li>
+                    <li>Take the id given and add it to the original homepage link like so: <span>https://www.localhost.com</span><span id="url">/ENTER-CUSTOM-ID-HERE</span></li>
+                </ul>
+
+                <div class="grid">
+                    <div class="gridBox left">
+                        <form method="GET">
+                            <label for="getShortId">Enter Website to recieve a Short Id</label><br>
+                            <div class="inputWrap">
+                                <input id="myInput" type="text" name="getShortId" value="https://" />
+                                <button type="button" id="getShort">Add Link</button>
+                            </div>
+                        </form>
+                    </div>
+    
+                    <div class="gridBox right">
+                        <div id="output"></div>
+                    </div>
+                </div>
+                
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.js"></script>
+        <script src="/js/app.js"></script>
+
+    </body>
+</html>
